@@ -1,4 +1,4 @@
-	var budget   = prompt("Ваш бюджет?", "100 рублей");
+	var budget   = prompt("Ваш бюджет?", "100");
 		  shopName = prompt("Название вашего магазина?", "Aldi");
 		  mainList = {
 		budget: 0,
