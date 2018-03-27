@@ -1,0 +1,12 @@
+body {
+	background: url('../img/0ece7c30a845698b228e66aafc32c4f9.jpg');
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+h2 {
+	color: #ccc;
+	text-align: center;
+	margin-top: 150px;
+}
