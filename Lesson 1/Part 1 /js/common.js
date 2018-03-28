@@ -1,8 +1,8 @@
 	var budget   = prompt("Ваш бюджет?", "100");
 		  shopName = prompt("Название вашего магазина?", "Aldi");
 		  mainList = {
-		budget: 0,
-		shopName: " ",
+		budget: budget,
+		shopName: shopName,
 		shopGoods: [],
 		employers: {
 			employerName: []
@@ -10,9 +10,12 @@
 		open: true
 	};
 
-	mainList.shopGoods[0] = prompt("Какой тип товара будем продавать?");
-	mainList.shopGoods[1] = prompt("Какой тип товара будем продавать?");
-	mainList.shopGoods[2] = prompt("Какой тип товара будем продавать?");
+	for (var i = 0; i < 5; i++) {
+		let a = prompt("Какой тип товара будем продавать?");
+		mainList.shopGoods[i] = a;
+
+	};
+
 
 	alert(+budget/30 + " рублей");
-	console.log(mainList.shopGoods);
+	console.log(mainList);

@@ -1,0 +1,60 @@
+body {
+	background: url('../img/winter-in-moscow-53892-2560x1440.jpg');
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-family: 'IBM Plex Sans', sans-serif;
+}
+
+h2 {
+	color: tomato;
+	text-align: center;
+	margin-top: 150px;
+}
+
+p {
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+	font-style: italic;
+}
+
+.week {
+	text-align: center;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+}
+.open {
+	text-transform: uppercase;
+	font-size: 18px;
+	border-radius: 10px;
+	background-color: #ccc;
+}
+ul {
+	display: none;
+	list-style-type: none;
+	text-align: center;
+}
+li {
+	display: inline-block;
+	color: #fff;
+	padding-right: 15px;
+}
+#day6 , #day7 {
+	font-weight: bold;
+}
+
+.active {
+	font-style: italic;
+	font-size: 17px;
+}
+
+
+
+
