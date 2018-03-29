@@ -4,6 +4,8 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	font-family: 'IBM Plex Sans', sans-serif;
+	color: #fff;
+	text-align: center;
 }
 
 h2 {
@@ -18,43 +20,9 @@ p {
 	font-size: 20px;
 	font-style: italic;
 }
-
-.week {
-	text-align: center;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	justify-content: center;
-	-ms-align-items: center;
-	align-items: center;
+strong {
+	font-size: 20px;
 }
-.open {
-	text-transform: uppercase;
-	font-size: 18px;
-	border-radius: 10px;
-	background-color: #ccc;
+i {
+	font-size: 19px;
 }
-ul {
-	display: none;
-	list-style-type: none;
-	text-align: center;
-}
-li {
-	display: inline-block;
-	color: #fff;
-	padding-right: 15px;
-}
-#day6 , #day7 {
-	font-weight: bold;
-}
-
-.active {
-	font-style: italic;
-	font-size: 17px;
-}
-
-
-
-

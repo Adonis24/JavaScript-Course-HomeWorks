@@ -49,12 +49,8 @@
 // alert(x++);
 // console.log(x);
 
-let week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-		weekOpen = document.getElementById('weekopen'),
-		weekList = document.getElementById('weeklist'),
-		day1 = document.getElementById("day1"),
-		day = document.getElementById("day"),
-		day7 = document.getElementById("day7");
+let week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
 
 alert(week);
 
@@ -66,22 +62,14 @@ alert(week);
 // 	};
 // }
 
-for (var i = 0; i < 7; i++) {
+for (let i = 0; i < week.length; i++) {
+	let today = 'Wednesday';
+	if ((week[i] == 'Saturday' || week[i] == 'Sunday')) {
+		document.write('<strong><em>' + week[i] + '</em></strong><br>');
+	} else if ((week[i] == today)) {
+		document.write('<i>'+ week[i] + '</i><br>');
+	} else {
+		document.write(week[i] + '<br>');
+	}
 
-	day.innerHTML = week[i];
-	day1.innerHTML = week[2];
-	day7.innerHTML = week[6];
 };
-
-window.addEventListener('DOMContentLoaded', function() {
-
-	weekOpen.addEventListener('click', () => {
-		weeklist.style.display = 'flex';
-	})
-
-
-});
-
-
-
-
