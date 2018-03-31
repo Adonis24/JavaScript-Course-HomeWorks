@@ -1,0 +1,20 @@
+body {
+	background: url('../img/winter-in-moscow-53892-2560x1440.jpg');
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-family: 'IBM Plex Sans', sans-serif;
+}
+
+h2 {
+	color: tomato;
+	text-align: center;
+	margin-top: 150px;
+}
+
+p {
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+	font-style: italic;
+}
