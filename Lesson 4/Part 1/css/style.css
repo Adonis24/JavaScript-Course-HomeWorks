@@ -1,0 +1,24 @@
+body {
+	background: url('../img/dh-shops-lisbon-portugal-portuguese-luxury-shop-ferreira-marques-filhos-GJ42CE.jpg');
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-family: 'IBM Plex Sans', sans-serif;
+}
+
+h2 {
+	font-size: 30px;
+	color: tomato;
+	text-align: center;
+	margin-top: 150px;
+}
+
+p {
+	text-align: center;
+	color: blue;
+	border: 2px solid yellow;
+	border-radius: 2px;
+	background-color: rgba(255, 255, 255, 0.3);
+	font-size: 20px;
+	font-style: italic;
+}
