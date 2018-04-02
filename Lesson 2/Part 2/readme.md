@@ -1,4 +1,4 @@
-<h1><strong>MySecondJsLesson</strong> <br>Lesson 1</h1>
+<h1><strong>MySecondJsLesson</strong> <br>Lesson 2</h1>
 
 <p>
 	<img src="https://pp.userapi.com/c837629/v837629008/3b890/jYgGpTkpXBA.jpg" alt="firtsjs">
