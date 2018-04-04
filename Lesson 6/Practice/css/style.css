@@ -1,0 +1,41 @@
+body {
+	background: url('../img/homer.jpg');
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-family: 'IBM Plex Sans', sans-serif;
+	text-align: center;
+}
+
+h2 {
+	font-size: 30px;
+	color: tomato;
+	text-align: center;
+	margin-top: 150px;
+}
+
+p {
+	text-align: center;
+	color: #fff;
+	border: 2px solid #ccc;
+	border-radius: 2px;
+	background-color: rgba(255, 255, 255, 0.3);
+	font-size: 20px;
+	font-style: italic;
+}
+button {
+	text-align: center;
+	padding: 25px;
+	border-radius: 10px;
+	border: 2px solid tomato;
+	background-color: #f3f3;
+	color: #fff;
+	outline: none;
+}
+button:hover {
+	background-color: #ccc;
+	cursor: pointer;
+}
+a {
+	color: #fff
+}
