@@ -1,4 +1,5 @@
-let openBtn        = document.getElementById('open-btn'),
+let openBlock      = document.getElementById('open'),
+    openBtn        = document.getElementById('open-btn'),
     name           = document.getElementsByClassName('name'),
     nameValue      = document.getElementsByClassName('name-value')[0],
     budget         = document.getElementsByClassName('budget'),
@@ -21,7 +22,11 @@ let openBtn        = document.getElementById('open-btn'),
     chooseItem     = document.querySelector('.choose-item'),
     timeValue      = document.querySelector('.time-value'),
     countBudgetVal = document.querySelector('.count-budget-value'),
-    hireEmpItem    = document.querySelectorAll('.hire-employers-item');
+    hireEmpItem    = document.querySelectorAll('.hire-employers-item'),
+    img1           = document.getElementsByClassName('img1')[0],
+    img2           = document.getElementsByClassName('img2')[0],
+    discImg1       = document.getElementsByClassName('discImg1')[0],
+    discImg2       = document.getElementsByClassName('discImg2')[0];
 
 let money,
     price;
@@ -36,14 +41,15 @@ openBtn.addEventListener('click', () => {
 
   if (discount === true) {
     price -= price*20/100;
-    discountValue.style.backgroundColor = 'yellow';
+    discImg1.style.display = 'block';
     console.log(price);
   } else {
-    discountValue.style.backgroundColor = 'red';
+    discImg2.style.display = 'block';
     console.log(price);
   }
   budgetValue.textContent = money;
   nameValue.textContent   = prompt("Название вашего магазина?", "Aldi").toUpperCase();
+  openBlock.classList.remove('active');
 });
 
 goodsItemBtn.addEventListener('click', () => {
@@ -88,9 +94,11 @@ timeValue.addEventListener('change', () => {
     mainList.open = false;
   };
   if (mainList.open == true) {
-    isopenValue.style.backgroundColor = 'green';
+    img2.style.display = 'block';
+    img1.style.display = 'none';
   } else {
-    isopenValue.style.backgroundColor = 'red';
+    img1.style.display = 'block';
+    img2.style.display = 'none';
   }
 });
 // budgetValue.addEventListener('change', () => {
@@ -152,3 +160,18 @@ let mainList = {
 };
 
 console.log(mainList);
+document.body.onload = function() {
+  
+  setTimeout(function(){
+    var preloader = document.getElementById('page-preloader');
+    if( !preloader.classList.contains('done'))
+      {
+        preloader.classList.add('done');
+      }
+  }, 1000);
+
+}
+
+
+
+
