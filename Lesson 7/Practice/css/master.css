@@ -1,0 +1,33 @@
+.btn {
+  padding: 10px;
+  color: #ccc;
+  border: 2px solid tomato;
+  background-color: green;
+}
+.box {
+  width: 400px;
+  height: 400px;
+  border: 2px solid yellow;
+  background-color: pink;
+  position: relative;
+}
+.object {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  position: absolute;
+}
+
+button {
+  padding: 50px 50px;
+  background-color: tomato;
+}
+.btn-block {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  background-color: #ccc;
+  width: 500px;
+  height: 500px;
+  padding-top: 100px;
+}
