@@ -35,7 +35,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
  //Timer
 
-	let deadline = '2018-04-13';
+	let deadline = '2018-04-12';
 
 	function getTimeRemaining(endtime) {
 		let t = Date.parse(endtime) - Date.parse(new Date()),
@@ -145,15 +145,20 @@ window.addEventListener('DOMContentLoaded', function () {
 		popup.classList.add('fadePop');
 		document.body.style.overflow = 'hidden';
 	});
+
 	close.addEventListener('click', function() {
 		popup.classList.remove('fadePop');
 		overlay.style.display = 'none';
 		more.classList.remove('more-splash');
+		statusMessage.innerHTML = '';
+		statusMessage.classList.remove('status');
 		document.body.style.overflow = '';
 	});
 	window.addEventListener('click', function(event) {
     if (event.target == overlay) {
         overlay.style.display = 'none';
+				statusMessage.innerHTML = '';
+				statusMessage.classList.remove('status');
 				document.body.style.overflow = '';
     }
 	});
@@ -166,7 +171,7 @@ window.addEventListener('DOMContentLoaded', function () {
 	let form = document.getElementsByClassName('main-form')[0],
 	input = form.getElementsByTagName('input'),
 	statusMessage = document.createElement('div');
-	statusMessage.classList.add('status');
+
 
 	form.addEventListener('submit', function() {
 		event.preventDefault();
@@ -181,11 +186,14 @@ window.addEventListener('DOMContentLoaded', function () {
 		request.onreadystatechange = function() {
 			if (request.readyState < 4) {
 				statusMessage.innerHTML = message.loading;
+				statusMessage.classList.add('status');
 			} else if (request.readyState === 4 ) {
 				if (request.status === 200 && request.status < 300) {
 					statusMessage.innerHTML = message.succes;
+					statusMessage.classList.add('status');
 				} else {
 					statusMessage.innerHTML = message.failure;
+					statusMessage.classList.add('status');
 				}
 			}
 		}
@@ -195,6 +203,9 @@ window.addEventListener('DOMContentLoaded', function () {
 	});
 
 });
+
+
+
 
 
 
