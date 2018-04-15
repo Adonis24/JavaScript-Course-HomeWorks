@@ -31,6 +31,54 @@
     top: -300px;
   }
 }
+.totalFade {
+  -webkit-animation-name: totalFade;
+          animation-name: totalFade;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: totalFade;
+  -webkit-animation-duration: 1s;
+}
+@keyframes totalFade {
+  0% {
+    font-size: 25px;
+    opacity: 0;
+    transform: rotateZ(10deg);
+  }
+  100% {
+    font-size: 46px;
+    opacity: 1;
+    transform: rotateZ(0deg);
+  }
+}
+.sliderUp {
+  -webkit-animation-name: sliderUp;
+          animation-name: sliderUp;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: sliderUp;
+  -webkit-animation-duration: 1s;
+}
+@keyframes sliderUp {
+  0% {
+    opacity: 0;
+    width: 65%;
+    border-radius: 0;
+  }
+  25% {
+    opacity: .2;
+    transform: rotate(3deg);
+  }
+  75% {
+    opacity: .7;
+    transform: rotate(-3deg);
+  }
+  100% {
+    opacity: 1;
+    width: 80%;
+    transform: rotate(0deg);
+  }
+}
 
 .fade {
   -webkit-animation-name: fade;
@@ -114,6 +162,25 @@ a:active {
   width: 100%;
   height: 100%;
   border-radius: 2px;
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+}
+#form {
+  position: relative;
+}
+.succesForm {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  text-align: center;
+  color: #ccc;
+  background: rgb(170, 125, 76);
+  border-radius: 7px;
+  padding: 5px;
   -webkit-animation-name: fade;
           animation-name: fade;
   -webkit-animation-duration: 1.5s;

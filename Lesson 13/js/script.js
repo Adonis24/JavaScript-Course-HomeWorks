@@ -35,7 +35,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 	 //Timer
 
-		let deadline = '2018-04-15';
+		let deadline = '2018-04-25';
 
 		function getTimeRemaining(endtime) {
 			let t = Date.parse(endtime) - Date.parse(new Date()),
@@ -169,9 +169,11 @@ window.addEventListener('DOMContentLoaded', function () {
 		message.failure = 'Что-то пошло не так';
 
 		let form = document.getElementsByClassName('main-form')[0],
+		lastForm = document.getElementsByTagName('form')[0],
+		lastFormInput = lastForm.getElementsByTagName('input'),
 		input = form.getElementsByTagName('input'),
-		statusMessage = document.createElement('div');
-
+		statusMessage = document.createElement('div'),
+		succesForm = document.createElement('div');
 
 		form.addEventListener('submit', function() {
 			event.preventDefault();
@@ -201,6 +203,36 @@ window.addEventListener('DOMContentLoaded', function () {
 				input[i].value = '';
 			}
 		});
+		lastForm.addEventListener('submit', function() {
+			event.preventDefault();
+			lastForm.appendChild(succesForm);
+
+			let request = new XMLHttpRequest();
+			request.open('POST', 'server.php');
+			request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+			let formData  = new FormData(lastForm);
+
+			request.send(formData);
+			request.onreadystatechange = function() {
+				if (request.readyState < 4) {
+					succesForm.innerHTML = message.loading;
+					succesForm.classList.add('succesForm');
+				} else if (request.readyState === 4 ) {
+					if (request.status === 200 && request.status < 300) {
+						succesForm.innerHTML = message.succes;
+						succesForm.classList.add('succesForm');
+					} else {
+						succesForm.innerHTML = message.failure;
+						succesForm.classList.add('succesForm');
+					}
+				}
+			}
+			for (let i = 0; i < lastFormInput.length; i++) {
+				lastFormInput[i].value = '';
+			}
+
+		});
+
 
 		let slideIndex = 1,
 				slides = document.getElementsByClassName('slider-item'),
@@ -265,8 +297,10 @@ window.addEventListener('DOMContentLoaded', function () {
 					total = (daysSum + personsSum)*4000;
 					if (restDays.value === '' || person.value === '' || restDays.value === '0' || person.value === '0') {
 						totalValue.innerHTML = 0;
+						totalValue.classList.remove('totalFade');
 					} else {
 						totalValue.innerHTML = total;
+						totalValue.classList.add('totalFade');
 					}
 				});
 				restDays.addEventListener('change', function() {
@@ -274,8 +308,10 @@ window.addEventListener('DOMContentLoaded', function () {
 					total = (daysSum + personsSum)*4000;
 					if (restDays.value === '' || person.value === '' || restDays.value === '0' || person.value === '0') {
 						totalValue.innerHTML = 0;
+						totalValue.classList.remove('totalFade');
 					} else {
 						totalValue.innerHTML = total;
+						totalValue.classList.add('totalFade');
 					}
 				});
 
@@ -284,7 +320,8 @@ window.addEventListener('DOMContentLoaded', function () {
 						totalValue.innerHTML = 0;
 					} else {
 						let a = total;
-						totalValue.innerHTML = a * this.options[this.selectedIndex].value;;
+						totalValue.innerHTML = a * this.options[this.selectedIndex].value;
+						totalValue.classList.add('totalFade');
 					}
 				});
 
