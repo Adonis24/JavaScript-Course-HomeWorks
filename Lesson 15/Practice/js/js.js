@@ -13,6 +13,10 @@ describe("sayName", function() {
 	});
 });
 
+function matH(a,b) {
+	return a + b;
+}
+matH(2,2);
 
 // function sayName(name) {
 // 	let message = "My name is " + name;
