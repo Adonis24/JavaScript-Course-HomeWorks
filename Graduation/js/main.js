@@ -48,7 +48,7 @@ window.addEventListener('DOMContentLoaded', function () {
   }
 
 //Visual Effect of Active Ends
-
+ 
 // Popup
 
   popUpBtn.addEventListener('click', function () {
@@ -312,7 +312,7 @@ window.addEventListener('DOMContentLoaded', function () {
     newCandidate = candidate.cloneNode(true);
     document.getElementsByClassName('main-cards')[0].appendChild(newCandidate);
     candidateEdit(newCandidate);
-    if ( isNaN(candidateName.value) && candidateName.value != '' && candidateAge.value != '' && !isNaN(candidateAge.value) && candidateBio.value != '' && candidateName.value.length > 5) {
+    if ( isNaN(candidateName.value) && candidateName.value != '' && candidateAge.value != '' && candidateBio.value != '' && candidateName.value.length > 5) {
       document.getElementsByClassName('name')[2].innerHTML = candidateName.value;
       document.getElementsByClassName('age')[2].innerHTML = candidateAge.value;
       let checkedValue = null;
