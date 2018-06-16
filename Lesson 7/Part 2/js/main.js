@@ -191,7 +191,7 @@ btn.addEventListener('click', animation);
 // clearTimeout(timerId);
 
 
-// let timerId = setTimeout(log, 2000)// дуе ешьукШв = ыуеЕшьущге(дщпб 2000)
+// let timerId = setTimeout(log, 2000)// let timerId = setTimeout(log, 2000)
 //
 //
 // function log() {
